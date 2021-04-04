@@ -26,6 +26,7 @@ try:
                 salary = sales * pay_rate + fix_sal
                 summ_sal.append(salary)
                 summ_sal.sort()
+                summ_sal.reverse()
                 print('Salary of employee ', i, ': $', salary, sep='', file=f_out1)
             count = 0
             for s in summ_sal:
@@ -53,6 +54,7 @@ try:
                 salary2 = sales2 * pay_rate + fix_sal
                 summ_sal2.append(salary2)
                 summ_sal2.sort()
+                summ_sal2.reverse()
                 print('Salary of employee ', q, ': $', salary2, sep='', file=f_out2)
             count2 = 0
             for p in summ_sal2:
