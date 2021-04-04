@@ -2,7 +2,8 @@
 # заработную плату своим сотрудникам. Зарплата работников состоит из фиксированной оплаты (оклада) и части от стоимости
 # каждой продажи, совершенной сотрудником. Для удобства расчетов создана программа, Алексу Смиту нужно ввести
 # название улицы, на которой расположено предприятие, оплату с одной продажи, фиксированную оплату и количество
-# продаж каждого работника.
+# продаж каждого работника. Программа выводит фамилию работника и его зарплату, зарплату в порядке убывания
+# и среднюю зарплату всего коллектива.
 
 address = input('Enter the street of the enterprise: ')
 
@@ -18,11 +19,21 @@ try:
         with open('salary1.txt', 'w') as f_out1:
             pay_rate = float(input('Enter the payment from a one sale: '))
             fix_sal = float(input('Enter a fixed payment: '))
+            summ_sal = []
             for i in names:
                 print('Enter the integer number of sales of the employee', i + ': ')
                 sales = int(input())
                 salary = sales * pay_rate + fix_sal
+                summ_sal.append(salary)
+                summ_sal.sort()
                 print('Salary of employee ', i, ': $', salary, sep='', file=f_out1)
+            count = 0
+            for s in summ_sal:
+                count += s
+            average_salary = count / len(summ_sal)
+            print('-----------------------------------------------------------')
+            print('Salary in descending order:', *summ_sal)
+            print('Average salary:', average_salary)
 
     def Park_Avenue():
         with open('names2.txt') as f_in2:
@@ -35,11 +46,21 @@ try:
         with open('salary2.txt', 'w') as f_out2:
             pay_rate = float(input('Enter the payment from a one sale: '))
             fix_sal = float(input('Enter a fixed payment: '))
+            summ_sal2 = []
             for q in names2:
                 print('Enter the integer number of sales of the employee', q + ': ')
                 sales2 = int(input())
                 salary2 = sales2 * pay_rate + fix_sal
+                summ_sal2.append(salary2)
+                summ_sal2.sort()
                 print('Salary of employee ', q, ': $', salary2, sep='', file=f_out2)
+            count2 = 0
+            for p in summ_sal2:
+                count2 += p
+            average_salary = count2 / len(summ_sal2)
+            print('-----------------------------------------------------------')
+            print('Salary in descending order:', *summ_sal2)
+            print('Average salary:', average_salary)
 
 except ValueError:
     print('Check the correctness of the entered data')
