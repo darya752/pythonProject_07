@@ -1,0 +1,15 @@
+Salary of employee Austin: $402.0
+Salary of employee Backer: $602.0
+Salary of employee Brian: $802.0
+Salary of employee Carrington: $1002.0
+Salary of employee Cooper: $802.0
+Salary of employee Harrison: $602.0
+Salary of employee Holiday: $802.0
+Salary of employee Howard: $1002.0
+Salary of employee Jone: $802.0
+Salary of employee Reynolds: $1002.0
+Salary of employee Roberts: $802.0
+Salary of employee Smith: $1002.0
+Salary of employee Thornton: $802.0
+Salary of employee Turner: $1002.0
+Salary of employee Wood: $1202.0
